@@ -2,7 +2,7 @@ use std::convert::From;
 
 // a generic triple that is used everywhere and might implement other traits
 // if the types match
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Triple<S,P=S,O=S>{
     pub subject: S,
     pub predicate: P,
